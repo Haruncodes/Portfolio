@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact: Ravi Harun</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="index.html">Contact</a>
-    <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
-  </nav>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../Projects/index.html">Projects</a>
+        <a href="../Resume/index.html">Resume</a>
+        <a href="index.html" class="current">Contact</a>
+        <a href="https://github.com/Haruncodes" target="_blank">GitHub</a>
+    </nav>
+    <h1>Contact</h1>
+    <form action="mailto:rharun@ucsd.edu" method="POST" enctype="text/plain">
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            Subject:
+            <input type="text" name="subject" required>
+        </label>
+        <label>
+            Body:
+            <textarea name="body" required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
 
-  <h1>Contact Me</h1>
-
-  <form action="sample@example.com" method="POST" enctype="text/plain">
-    <label>
-      Your Email:
-      <input name="email" type="email" required>
-    </label>
-    <br><br>
-    <label>
-      Subject:
-      <input name="subject">
-    </label>
-    <br><br>
-    <label>
-      Message:
-      <textarea name="body" rows="5" cols="30"></textarea>
-    </label>
-    <br><br>
-    <button>Send</button>
-  </form>
 </body>
 </html>
 
