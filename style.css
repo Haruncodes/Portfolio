@@ -1,6 +1,135 @@
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
        */
+    background-color: #FCF8F3;
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin: 0 auto;
+    margin-inline: auto;
+    padding: 1rem;
   }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid oklch(80% 3% 200); /* cool gray */
+    margin-bottom: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  nav a:hover {
+    color: #3F4F44;
+  border-bottom: 0.3em solid #2C3930;
+  background-color: #A27B5C;
+}
+  
+  nav a.current {
+    color: #3F4F44;
+    border-bottom: 0.4em solid #A27B5C;
+  }
+  .contact-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    max-width: 600px;
+    margin: 2rem auto;
+    font: inherit;
+  }
+  
+  .contact-form label {
+    text-align: right;
+    padding-right: 1em;
+    align-self: center;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+  }
+  
+  .contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .contact-form div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+  }
+  
+  .projects article {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .projects h2 {
+    margin: 0 0 0.5em 0;
+  }
+  
+  .projects img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .projects p {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  .section-line {
+  height: 2px;
+  background-color: #ccc;
+  margin: 0.5em 0;
+  width: 100%;
+}
+.resume-header {
+  text-align: center;
+  margin-bottom: 1.5em; 
+}
+
+.resume-header h1 {
+  margin-bottom: 0.1em; 
+}
+
+.resume-header p {
+  margin-top: 0; 
+  line-height: 0.5; 
+}
+
+
+
+article img {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+
+  
