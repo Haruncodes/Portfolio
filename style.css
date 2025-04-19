@@ -1,21 +1,20 @@
-html {
-  color-scheme: light dark;
-}
-
 :root {
   --color-accent: oklch(65% 50% 0);
 }
 
+html {
+  color-scheme: light dark;
+}
 
 body {
-    background-color: #FCF8F3;
-    color: #222;
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin: 0 auto;
-    margin-inline: auto;
-    padding: 1rem;
-  }
+  color: CanvasText;
+  background-color: Canvas;
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
   nav {
     display: flex;
     justify-content: center;
