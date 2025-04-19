@@ -1,12 +1,15 @@
+html {
+  color-scheme: light dark;
+}
+
 :root {
   --color-accent: oklch(65% 50% 0);
 }
 
+
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
     background-color: #FCF8F3;
+    color: #222;
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin: 0 auto;
@@ -18,7 +21,8 @@ body {
     justify-content: center;
     gap: 2rem;
     padding: 1rem;
-    border-bottom: 1px solid oklch(80% 3% 200); /* cool gray */
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
   }
   
@@ -124,12 +128,19 @@ body {
   line-height: 0.5; 
 }
 
-
-
 article img {
   border: 2px solid #ccc;
   border-radius: 6px;
 }
 
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+.color-scheme select {
+  font-family: inherit;
+}
 
-  
