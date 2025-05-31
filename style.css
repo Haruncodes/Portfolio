@@ -280,6 +280,10 @@ dl.info dd {
 }
 
 circle {
+  @starting-style {
+    r: 0;
+  }
+  /* transition: all 200ms, r calc(var(--r) * 100ms); */
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;

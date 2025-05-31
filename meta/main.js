@@ -258,7 +258,7 @@ function renderScatterPlot(data, commits) {
   svg
     .append('g')
     .attr('transform', `translate(${usableArea.left}, 0)`)
-    .attr('class', 'y-axis') // just for consistency
+    .attr('class', 'y-axis')
     .call(yAxis);
 
     const dots = svg.append('g').attr('class', 'dots');
