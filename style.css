@@ -102,6 +102,8 @@ body {
     border: 2px solid #ccc;
     border-radius: 6px;
   }
+
+  
   
   .projects p {
     font-size: 0.9rem;
@@ -143,3 +145,164 @@ article img {
   font-family: inherit;
 }
 
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: gray;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.chart-legend-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin-block: 2em;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend-item .swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 0.25em;
+}
+
+path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+svg:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected path {
+  fill: var(--color);
+}
+
+.legend-item.selected .swatch {
+  background-color: var(--color);
+}
+
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 900px;
+  margin: 20px 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.stats dt {
+  grid-row: 1;
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.stats dd {
+  grid-row: 2;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 1. Style the <dl class="info"> as a two-column grid */
+dl.info {
+  display: grid;
+  grid-template-columns: max-content 1fr; /* labels in column 1, values in column 2 */
+  column-gap: 1em;    /* space between dt and dd */
+  row-gap: 0.5em;     /* space between rows */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Remove default margins */
+dl.info dt,
+dl.info dd {
+  margin: 0;
+}
+
+/* Make labels (dt) less prominent than values (dd) */
+dl.info dt {
+  color: #666;
+  font-weight: normal;
+  text-align: right;  /* right-align labels if you like */
+  padding-right: 0.5em;
+}
+dl.info dd {
+  color: #222;
+  font-weight: bold;
+}
+
+/* 2. Tooltip fixed to top-left of viewport */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1000;      /* ensure it sits above other content */
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}

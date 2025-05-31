@@ -23,6 +23,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'resume/', title: 'Resume' },
     { url: 'contact/', title: 'Contact' },
+    { url: 'meta/', title: 'Meta' },
     { url: 'https://github.com/Haruncodes', title: 'GitHub' }
 ];
 
@@ -98,6 +99,11 @@ for (let p of pages) {
         <${headingLevel}>${project.title}</${headingLevel}>
         <img src="${project.image}" alt="${project.title}">
         <p>${project.description}</p>
+        <div>
+        <p>${project.description}</p>
+        <p> © ${project.year}</p>
+        </div>
+
       `;
       containerElement.appendChild(article);
     }
