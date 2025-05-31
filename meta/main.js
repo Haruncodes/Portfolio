@@ -23,7 +23,7 @@ return d3
     let { author, date, time, timezone, datetime } = first;
     let ret = {
         id: commit,
-        url: 'https://github.com/haruncodes/portfolio/commit/' + commit,
+        url: 'https://github.com/Haruncodes/portfolio/commit/' + commit,
         author,
         date,
         time,
